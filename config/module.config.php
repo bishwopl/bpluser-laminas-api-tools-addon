@@ -3,6 +3,7 @@
 use LaminasApiToolsAddon\Authentication\Adapter\BplUserAuthAdapter;
 use Psr\Container\ContainerInterface;
 use CirclicalUser\Service\AuthenticationService;
+use Laminas\ApiTools\Admin;
 
 return [
     'circlical' => [
@@ -42,7 +43,6 @@ return [
                         Admin\Controller\DbAutodiscovery::class => ['default' => ['administrator']],
                         Admin\Controller\AuthenticationType::class => ['default' => ['administrator']],
                         Admin\Controller\Documentation::class => ['default' => ['administrator']],
-                        \Application\Controller\IndexController::class => ['default' => ['administrator']],
                     ],
                 ],
             ],
