@@ -1,0 +1,27 @@
+{
+    "name": "bishwopl/bpluser-laminas-api-tools-addon",
+    "description": "MVC Auth adapter for Laminas API Tools",
+    "license": "Apache-2.0",
+    "type": "library",
+    "homepage": "https://github.com/bishwopl/bpluser-laminas-api-tools-addon",
+    "keywords": [
+        "api",
+        "laminas-api-tools",
+        "mvc-auth"
+    ],
+    "authors": [
+        {
+            "name": "Bishwo Prasad Lamichhane",
+            "email": "bishwo.prasad@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "bishwopl/bpluser": "dev-master"
+    },
+    "autoload": {
+        "psr-4": { 
+            "LaminasApiToolsAddon\\": "src"
+        }
+    }
+}
