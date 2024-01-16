@@ -21,7 +21,6 @@ class Module implements ConfigProviderInterface, BootstrapListenerInterface {
         $app = $e->getApplication();
         $container = $app->getServiceManager();
 
-        // Add Authentication Adapter for session
         $defaultAuthenticationListener = $container->get(DefaultAuthenticationListener::class);
         $defaultAuthenticationListener->attach($container->get(BplUserAuthAdapter::class));
 

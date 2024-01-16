@@ -43,6 +43,7 @@ return [
                         Admin\Controller\DbAutodiscovery::class => ['default' => ['administrator']],
                         Admin\Controller\AuthenticationType::class => ['default' => ['administrator']],
                         Admin\Controller\Documentation::class => ['default' => ['administrator']],
+                        \Application\Controller\IndexController::class => ['default' => ['administrator']],
                     ],
                 ],
             ],
@@ -63,7 +64,9 @@ return [
     'service_manager' => [
         'factories' => [
             BplUserAuthAdapter::class => function(ContainerInterface $c){
-                return new BplUserAuthAdapter($c->get(AuthenticationService::class));
+                return new BplUserAuthAdapter(
+                        $c->get(AuthenticationService::class)
+                );
             }
         ],
     ],
